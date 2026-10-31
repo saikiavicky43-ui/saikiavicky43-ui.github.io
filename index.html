@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="as">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vicky Saikia - Assamese, Hindi and English poetry. A world of words, memories and feelings.">
+<title>Vicky Saikia | Poetry & Feelings</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#0b0b0b;color:#eee;
+ font-family:Georgia,'Noto Serif',serif;
+}
+header{
+ text-align:center;padding:65px 18px 45px;
+ background:linear-gradient(#171717,#0b0b0b);
+ border-bottom:1px solid #292929;
+}
+.tag{color:#aaa;letter-spacing:4px;font-size:11px}
+h1{font-size:39px;font-weight:normal;margin:20px 0 10px}
+.sub{color:#aaa;font-size:15px}
+nav{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:18px}
+nav a{color:#ccc;text-decoration:none;font-size:13px}
+nav a:hover{color:white}
+main{max-width:850px;margin:auto;padding:25px 20px}
+h2{font-weight:normal;text-align:center;margin:35px 0 22px}
+.intro{text-align:center;color:#aaa;line-height:1.9}
+.search{width:100%;padding:15px;background:#171717;border:1px solid #444;color:white;border-radius:6px;font-size:15px;margin:25px 0}
+.poem{
+ background:#141414;border:1px solid #292929;
+ padding:25px;margin:18px 0;border-radius:7px;
+}
+.poem h3{font-weight:normal;color:#eee;font-size:20px}
+.poem p{white-space:pre-line;color:#bbb;line-height:2;font-size:15px}
+.poem small{color:#777}
+.about{text-align:center;color:#aaa;line-height:2;padding:30px 10px}
+footer{text-align:center;border-top:1px solid #292929;padding:30px;color:#777;font-size:12px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="tag">A WORLD OF WORDS & FEELINGS</div>
+ <h1>Vicky Saikia</h1>
+ <div class="sub">Poetry • Memories • Emotions</div>
+ <p class="sub">কিছুমান অনুভৱ শব্দ হৈ ৰৈ যায়…</p>
+</header>
+
+<nav>
+ <a href="#home">HOME</a>
+ <a href="#poems">POEMS</a>
+ <a href="#about">ABOUT</a>
+</nav>
+
+<main id="home">
+ <p class="intro">
+  Welcome to my little world.<br>
+  Here, every word carries a feeling<br>
+  and every poem holds a memory.
+ </p>
+
+ <section id="poems">
+  <h2>My Poetry Collection</h2>
+  <input class="search" id="search"
+   placeholder="Search my poems..."
+   oninput="filterPoems()">
+
+  <div id="poemList">
+
+   <article class="poem">
+    <small>ASSAMESE POETRY</small>
+    <h3>নীৰৱ সন্ধিয়া</h3>
+    <p>কিছুমান সন্ধিয়া নীৰৱতাই কথা কয়,
+কিছুমান স্মৃতিয়ে আজিও উভতি চায়।
+শব্দবোৰ হেৰাই যায় সময়ৰ বুকুত,
+অনুভৱবোৰ ৰৈ যায় হৃদয়ৰ মাজত।</p>
+   </article>
+
+   <article class="poem">
+    <small>ASSAMESE POETRY</small>
+    <h3>স্মৃতি</h3>
+    <p>সময় পাৰ হৈ যায়, স্মৃতি নাযায়,
+কিছুমান মানুহ মনৰ পৰা হেৰাই নাযায়।
+নীৰৱতাৰ মাজতো কিছুমান কথা থাকে,
+যিবোৰ কেৱল হৃদয়েহে বুজি পায়।</p>
+   </article>
+
+   <article class="poem">
+    <small>HINDI POETRY</small>
+    <h3>ख़ामोशी</h3>
+    <p>कुछ बातें लफ़्ज़ों में बयां नहीं होतीं,
+कुछ यादें कभी पुरानी नहीं होतीं।
+वक़्त बदल जाता है अपनी रफ़्तार से,
+मगर कुछ एहसास कभी खत्म नहीं होते।</p>
+   </article>
+
+  </div>
+  <p id="noResult" style="display:none;text-align:center;color:#888">
+   No poems found.
+  </p>
+ </section>
+
+ <section id="about" class="about">
+  <h2>About The Author</h2>
+  <p>
+   I am Vicky Saikia.<br>
+   A lover of words, poetry and emotions.<br>
+   This is my little corner of the internet,
+   where feelings find their way into words.
+  </p>
+ </section>
+</main>
+
+<footer>
+ © 2026 Vicky Saikia • All Rights Reserved
+</footer>
+
+<script>
+function filterPoems(){
+ const q=document.getElementById('search').value.toLowerCase();
+ const poems=document.querySelectorAll('.poem');
+ let count=0;
+ poems.forEach(p=>{
+  const match=p.innerText.toLowerCase().includes(q);
+  p.style.display=match?'block':'none';
+  if(match)count++;
+ });
+ document.getElementById('noResult').style.display=count?'none':'block';
+}
+</script>
+</body>
+</html>
+<article class="poem">
+<small>NEW • UBHOTI OHAR OPEKKHAT</small>
+<h3>Ubhoti Ohar Opekkhat...</h3>
+<p>Aji kolomtu haatot loi bohisu,
+Othoso xobdoboro aji bor osinaki.
+Ki likhu baru ene eta kobita,
+Jar protitu xarit tair hridoy kopi uthe,
+Aru tai ebar ubhoti saboloi badhyo hoy.
+
+Mor nirobotaro je ek bhaxa ase,
+Seya tai ketiyau porhi nasale.
+Kiman je obhiman bukut puhi rakhisu,
+Seya kunu nikhai hisap koribo nuarile.
+
+Moi kunu notun kahini bisora nai,
+Puroni odhyaytuhe akou ebar melibo bisaru.
+Jot xomoye amak prithok kora nasil,
+Jot tair hahitei mor prithibikhon asil.
+
+Etiya mathu etai prarthona—
+Jodi ketiyaba mor ei kobita tair sokut pore,
+Tente xobdobor majot lukai thoka manuhjonok sini pabo...
+Jijone ajio tair ubhoti ohar axat
+Aakou adhorua kobita likhi ase.
+</p>
+<small>— Vicky Saikia | 30 Oct 2026</small>
+</article>
